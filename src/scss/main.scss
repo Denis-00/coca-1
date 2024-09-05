@@ -1,2 +1,10 @@
 @import './mixins';
- 
+@import './base';
+@import './globals';
+
+.body {
+    background: var(--neutral-color-10);
+    color: var(--neutral-color-100);
+    font-size: 70px;
+    font-weight: 700;
+}
