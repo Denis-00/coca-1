@@ -1,4 +1,6 @@
 .header {
+
+  z-index: var(--z-index-3);
   padding: 26px 0 22px;
 
   @include mobile {
@@ -65,6 +67,7 @@
 
   &__switcher {
     position: relative;
+    cursor: pointer;
     width: 63px;
     height: 27px;
     transform: translateY(8px);
