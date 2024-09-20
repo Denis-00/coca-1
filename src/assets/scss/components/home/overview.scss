@@ -36,9 +36,9 @@
     gap: 61px;
 
     @include tablet {
-      gap: 40px;
       flex-direction: column;
       align-items: center;
+      gap: 40px;
     }
   }
   &__item {
@@ -53,10 +53,11 @@
 
     &-title {
       max-width: 258px;
+      margin-bottom: 24px;
+      color: #fff;
       font-weight: 600;
       line-height: 42px;
       letter-spacing: -1px;
-      margin-bottom: 24px;
 
       @include tablet {
         margin-bottom: 18px;
