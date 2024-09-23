@@ -152,6 +152,10 @@
       margin-bottom: 22px;
     }
 
+    &-img {
+      flex-shrink: 0;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
