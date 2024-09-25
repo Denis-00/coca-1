@@ -21,3 +21,18 @@ export const insightSlider = () => {
     },
   });
 };
+
+export const testimonialsSlider = () => {
+  new Swiper('.testimonials__slider', {
+    loop: true,
+    slidesPerView: 1,
+    modules: [Navigation],
+    centeredSlides: true,
+  
+
+    navigation: {
+      nextEl: '.testimonials__nav-next',
+      prevEl: '.testimonials__nav-prev',
+    },
+  });
+};
