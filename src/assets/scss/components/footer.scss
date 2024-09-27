@@ -131,7 +131,9 @@
     }
 
     @include small-mobile {
+      flex-direction: column;
       text-align: center;
+      gap: 20px;
     }
   }
   &__item {
@@ -265,5 +267,18 @@
     font-weight: 500;
     line-height: 1.43;
     color: #fff;
+  }
+}
+
+.accordion-list {
+  &__content {
+    @include small-mobile {
+      max-height: 0;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+  }
+  &__control {
+    cursor: pointer;
   }
 }
