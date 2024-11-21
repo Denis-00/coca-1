@@ -1,8 +1,20 @@
 .hero {
   padding: 90px 0 160px;
+
+  @include mobile {
+    padding: 40px 0 68px;
+  }
   &__head {
     text-align: center;
-    margin-bottom: 186px;
+   padding-bottom: 186px;
+
+    @include tablet {
+      padding-bottom: 86px;
+    }
+
+    @include mobile {
+      padding-bottom: 56px;
+    }
 
     &::before {
       top: -40px;
@@ -22,6 +34,9 @@
     padding: 4px 12px;
     background: #1463ff1a;
     margin-bottom: 24px;
+    @include small-mobile {
+      margin-bottom: 18px;
+    }
   }
   &__descr {
     margin: 0 auto 56px;
@@ -30,6 +45,9 @@
     line-height: 1.2;
     letter-spacing: -0.04em;
     color: var(--neutral-color-100);
+    @include mobile {
+      margin-bottom: 36px;
+    }
   }
 
   &__switcher {
@@ -80,9 +98,34 @@
     box-sizing: border-box;
     border: 1px solid var(--neutral-color-30);
     border-radius: 16px;
+    @include mini-desktop {
+      max-width: 320px;
+    }
+
+    @include tablet {
+      max-width: 450px;
+    }
+
+    &:first-child {
+      @include tablet {
+        order: 2;
+      }
+    }
+    &:last-child {
+      @include tablet {
+        order: 3;
+      }
+    }
   }
 
   &__plans {
+    @include flex-justify-between;
+    gap: 40px 10px;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
     &-icon {
       @include flex-all-center;
       border-radius: 100px;
@@ -92,11 +135,41 @@
       margin-bottom: 8px;
     }
 
+    &--popular {
+      transform: translateY(-60px);
+      background-color: var(--neutral-color-90);
+      border-color: var(--primary-color-400);
+
+      @include tablet {
+        transform: translateY(0);
+        order: 1;
+      }
+    }
+
+    &-top {
+      @include flex-justify-between;
+
+      &-text {
+        background-color: var(--primary-color-40);
+        border-radius: 100px;
+        max-height: 32px;
+        padding: 6px 12px;
+        font-weight: 500;
+        line-height: 1.43;
+        text-align: center;
+        color: #fff;
+      }
+    }
+
     &-title {
       font-weight: 600;
       line-height: 1.42;
       color: var(--neutral-color-100);
       margin-bottom: 8px;
+
+      &--popular {
+        color: #fff;
+      }
     }
 
     &-text {
@@ -113,6 +186,10 @@
       color: var(--neutral-color-100);
       margin-bottom: 24px;
 
+      &--popular span {
+        color: #fff;
+      }
+
       &-text {
         font-weight: 500;
         line-height: 1.62;
@@ -126,6 +203,9 @@
         line-height: 1.5;
         color: var(--neutral-color-100);
         margin-bottom: 16px;
+        &--popular {
+          color: #fff;
+        }
       }
     }
 
@@ -136,6 +216,10 @@
       line-height: 1.62;
       color: var(--neutral-color-100);
       margin-bottom: 16px;
+
+      &--popular {
+        color: #fff;
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -166,6 +250,11 @@
       border: 1px solid var(--neutral-color-40);
       border-radius: 100px;
       padding: 16px 35px;
+
+      &--popular {
+        color: #1D1E25;
+        background-color: #fff;
+      }
 
       &-wrapper {
         text-align: center;
