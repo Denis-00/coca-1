@@ -12,6 +12,7 @@ export default defineConfig({
   build: {
     outDir: '../dist',
     emptyOutDir: true,
+    publicDir: '/src/assets',
     rollupOptions: {
       input: {
         main: './src/index.html',
