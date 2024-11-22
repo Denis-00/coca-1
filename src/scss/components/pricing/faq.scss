@@ -10,8 +10,8 @@
     line-height: 1.2;
     color: var(--neutral-color-100);
     @include mobile {
-        margin-bottom: 18px;
-      }
+      margin-bottom: 18px;
+    }
   }
   &__descr {
     margin-bottom: 80px;
@@ -19,8 +19,8 @@
     line-height: 1.78;
     color: var(--neutral-color-150);
     @include mobile {
-        margin-bottom: 50px;
-      }
+      margin-bottom: 50px;
+    }
   }
 
   &__accordion {
@@ -28,15 +28,15 @@
     border-bottom: 1px solid var(--neutral-color-30);
 
     @include mobile {
-        padding-bottom: 12px;
+      padding-bottom: 12px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 56px;
+
+      @include mobile {
+        margin-bottom: 36px;
       }
-  
-      &:not(:last-child) {
-        margin-bottom: 56px;
-  
-        @include mobile {
-          margin-bottom: 36px;
-        }
     }
     &-control {
       @include flex-all-between;
@@ -50,7 +50,7 @@
     }
 
     &-title {
-        text-align: left;
+      text-align: left;
       padding-bottom: 16px;
       font-weight: 600;
       line-height: 1.5;
