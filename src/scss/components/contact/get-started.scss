@@ -36,6 +36,13 @@
   }
 
   &__form {
+    position: absolute;
+    left: 7%;
+    border: 1px solid #ced1d8;
+    padding: 56px 48px;
+    max-width: 608px;
+    width: 100%;
+    background: #fff;
     @include mobile {
       @include flex-column;
     }
@@ -47,13 +54,6 @@
       padding: 36px 28px;
       min-width: 300px;
     }
-    position: absolute;
-    left: 7%;
-    border: 1px solid #ced1d8;
-    padding: 56px 48px;
-    max-width: 608px;
-    width: 100%;
-    background: #fff;
 
     &-title {
       margin-bottom: 20px;
